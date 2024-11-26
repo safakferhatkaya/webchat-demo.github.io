@@ -10,12 +10,10 @@
    </body>
    <script>
       const script = document.createElement("script");
-      script.src = "https://cdn.buckplatform.com/webchat.js";
+      script.src = `https://cdn.buckplatform.com/tradesgpt/webchat/main.js?t=${new Date().getTime()}`;
       script.onload = function () {
-          const token = 'dac886f8e070b667c485d350f4bd61b4b52bb7162d3701fffc47467eb2a97a16';
-          const accountLogoUrl = 'null';
-          window.initChatApp(token, accountLogoUrl);
+        window.initializeChatApp("dac886f8e070b667c485d350f4bd61b4b52bb7162d3701fffc47467eb2a97a16")
       };
       document.head.appendChild(script);
-  </script>
+    </script>
 </html>
