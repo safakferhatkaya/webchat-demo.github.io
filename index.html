@@ -1,20 +1,169 @@
-<!DOCTYPE html>
-<html>
-   <head>
-      <title>Test Webchat Demo</title>
-   </head>
-   <body>
-      <div>
-         Demon Demon
-      </div>
-   </body>
-   <script>
-      const script = document.createElement("script");
-      script.src = "https://cdn.buckplatform.com/tradesgpt/webchat/main.js?t=" + new Date().getTime();
-      script.onload = function () {
-        const token = "aea0e755dfbbd5f4816d5c7bf6ee86fb40484404d34f237995a6046faecc8290";
-        window.initializeChatApp(token);
-      };
-      document.head.appendChild(script);
-    </script>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Premier Home Services</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
+
+            header {
+                background-color: #2c3e50;
+                color: white;
+                padding: 1rem;
+            }
+
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .logo {
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            .nav-links {
+                list-style: none;
+                display: flex;
+                gap: 2rem;
+            }
+
+            .nav-links a {
+                color: white;
+                text-decoration: none;
+            }
+
+            .hero {
+                background-image: linear-gradient(
+                        rgba(0, 0, 0, 0.5),
+                        rgba(0, 0, 0, 0.5)
+                    ),
+                    url("https://images.unsplash.com/photo-1560518883-ce09059eeffa");
+                background-size: cover;
+                background-position: center;
+                height: 500px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: white;
+            }
+
+            .hero-content h1 {
+                font-size: 48px;
+                margin-bottom: 1rem;
+            }
+
+            .cta-button {
+                background-color: #e74c3c;
+                color: white;
+                padding: 1rem 2rem;
+                border: none;
+                border-radius: 5px;
+                font-size: 18px;
+                cursor: pointer;
+            }
+
+            .services {
+                padding: 4rem 2rem;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .services h2 {
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+
+            .service-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+            }
+
+            .service-card {
+                padding: 2rem;
+                border-radius: 10px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+
+            footer {
+                background-color: #2c3e50;
+                color: white;
+                padding: 2rem;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo">Premier Home Services</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Your Trusted Home Service Provider</h1>
+                <p>Professional, Reliable, and Quality Service for Your Home</p>
+                <button class="cta-button">Get a Free Quote</button>
+            </div>
+        </section>
+
+        <section class="services">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Plumbing</h3>
+                    <p>Professional plumbing services for all your needs</p>
+                </div>
+                <div class="service-card">
+                    <h3>Electrical</h3>
+                    <p>Licensed electricians for your home electrical work</p>
+                </div>
+                <div class="service-card">
+                    <h3>HVAC</h3>
+                    <p>Heating, ventilation, and air conditioning services</p>
+                </div>
+                <div class="service-card">
+                    <h3>Cleaning</h3>
+                    <p>Comprehensive cleaning services for your home</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Premier Home Services. All rights reserved.</p>
+        </footer>
+
+        <!-- Chat Widget Script -->
+        <script>
+            const script = document.createElement("script");
+            script.src =
+                "https://cdn.buckplatform.com/tradesgpt/webchat/main.js?t=" +
+                new Date().getTime();
+            script.onload = function () {
+                const token =
+                    "aea0e755dfbbd5f4816d5c7bf6ee86fb40484404d34f237995a6046faecc8290";
+                window.initializeChatApp(token);
+            };
+            document.head.appendChild(script);
+        </script>
+    </body>
 </html>
